@@ -14,6 +14,7 @@ public enum EscenarioMecanico {
     MECANIZADO;
 
     public String movimiento() {
+        System.out.println("hare pruebas de movimiento");
         return "MOVIMIENTO";
     }
 

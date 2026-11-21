@@ -1,57 +1,38 @@
 package ec.edu.espoch.mecanicamath;
 
 import java.util.Scanner;
-import model.EscenarioMecanico;
 import model.Funcion;
-import org.matheclipse.core.eval.ExprEvaluator;
-import org.matheclipse.core.interfaces.IExpr;
+import model.Intervalo;
+import model.ResultadoAnalisis;
+import service.DerivadaService;
 
 public class MecanicaMath {
 
     public static void main(String[] args) {
+        //en el contexto el usuario 1. elige el caso de uso
+        // 2. ingresa una funcion
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("elige una opciones entre el 1. RENDIMIENTO"
-                + " 2. MOVIMIENTO"
-                + " 3. MECANIZADO : ");
-        int opciones = sc.nextInt();
+        System.out.println("Ingresa la funcion - f(x) = ");
+        String input = sc.nextLine();
 
-        switch (opciones) {
-            case 1:
-                System.out.println("tu seleccion es:" + EscenarioMecanico.RENDIMIENTO);
-                System.out.println("Ingresa la funcion que deseas analizar");
-                String funcion = sc.nextLine();
-                if (funcion != sc.nextLine()) {
-                    System.out.println("error");
+        Funcion funcion = new Funcion(input);
+        System.out.println(" f(x) = " + funcion.getExpresion());
+        System.out.println("D(" + funcion.getExpresion() + ", x)");
 
-                }
-                System.out.println("tu funcion es : " + funcion);
-                sc.nextLine();
+        DerivadaService ds = new DerivadaService();
+        System.out.println(ds.calcularPrimeraDerivada(funcion));
+        System.out.println(ds.calcularSegundaDerivada(funcion));
 
-                break;
-            case 2:
-                System.out.println("tu seleccion es: " + EscenarioMecanico.MOVIMIENTO);
-            case 3:
-                System.out.println("tu seleccion es: " + EscenarioMecanico.MECANIZADO);
-            default:
-                throw new AssertionError();
-        }
+        System.out.println("ingresa el limite inferior para la f(x) = ");
+        int limiteInferior = sc.nextInt();
+        System.out.println("ingresa el limite superior para la f(x) = ");
+        int limiteSuperior = sc.nextInt();
 
-        // Inicializa el motor de Symja
-//        ExprEvaluator util = new ExprEvaluator();
-//
-//        String derivadaSimple = "D(3*x^2 + 5x,x)";
-//        IExpr res1 = util.eval(derivadaSimple);
-//        System.out.println("Primera derivada es: " + res1);
-//
-//        String segundaDerivada = "D(x^4 + x^3, {x,2})";
-//        IExpr res2 = util.eval(segundaDerivada);
-//        System.out.println("Segunda derivada es: " + res2);
-//
-//        Funcion funcion = new Funcion(0, segundaDerivada, res2.toString());
-//        System.out.println("objeto funcion creado con exito para pruebas");
-//        funcion.getExpresion();
-//        System.out.println(funcion.getVariable());
-//        System.out.println(funcion.getId());
+        Intervalo intervalo = new Intervalo(limiteInferior, limiteSuperior);
+        intervalo.validar(limiteInferior, limiteSuperior);
+
+        ResultadoAnalisis analisis = new ResultadoAnalisis(ds.calcularPrimeraDerivada(funcion), ds.calcularSegundaDerivada(funcion));
+        analisis.toString();
     }
 }

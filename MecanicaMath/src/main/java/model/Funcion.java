@@ -11,6 +11,10 @@ public class Funcion {
         this.expresion = expresion;
         this.variable = variable;
     }
+    public Funcion(String expresion) {
+        this.expresion = expresion;
+    }
+    
 
     public long getId() {
         return id;
