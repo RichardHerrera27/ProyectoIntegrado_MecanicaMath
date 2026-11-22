@@ -13,6 +13,7 @@ public class Analisis {
     private LocalDateTime fechaCreacion;
 
     public String obtenerResumen() {
+        
         return "";
     }
 }

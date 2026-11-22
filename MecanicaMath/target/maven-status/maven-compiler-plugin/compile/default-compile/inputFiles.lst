@@ -2,13 +2,15 @@ C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\controller\Analis
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\controller\HistorialController.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\AnalisisDAO.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\AnalisisDAOImpl.java
+C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\FuncionDAO.java
+C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\FuncionDAOImpl.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\PuntoCriticoDAO.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\PuntoCriticoDAOImpl.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\ResultadosDAO.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\dao\daoimpl\ResultadosDAOImpl.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\database\ConexionDB.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\ec\edu\espoch\mecanicamath\MecanicaMath.java
-C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\ec\edu\espoch\mecanicamath\PruebaInterfaz.java
+C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\ec\edu\espoch\mecanicamath\TestCodeMecanicaMath.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\model\Analisis.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\model\EscenarioMecanico.java
 C:\Users\RDHHi\Desktop\MecanicaMath\MecanicaMath\src\main\java\model\Funcion.java

@@ -2,25 +2,29 @@ package model;
 
 public class Funcion {
 
-    private long id;
+    private int id;
     private String expresion;
     private String variable;
 
-    public Funcion(long id, String expresion, String variable) {
+    public Funcion(int id, String expresion, String variable) {
         this.id = id;
         this.expresion = expresion;
         this.variable = variable;
     }
+
     public Funcion(String expresion) {
         this.expresion = expresion;
     }
-    
+
+    public Funcion() {
+
+    }
 
     public long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
